@@ -1,0 +1,40 @@
+.section { position: relative; display: grid; min-height: 460px; place-items: center; overflow: hidden; padding: 66px 24px; border-bottom: 4px solid #171820; color: #171820; background-color: #ffd447; background-image: radial-gradient(circle, rgb(23 24 32 / 14%) 1px, transparent 1.5px); background-size: 8px 8px; }
+.section::before { position: absolute; top: 20px; right: 23px; bottom: 20px; left: 23px; border: 3px solid #171820; box-shadow: inset 0 0 0 5px #ffd447, inset 0 0 0 7px rgb(23 24 32 / 65%); content: ''; pointer-events: none; }
+.content { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr); align-items: center; gap: 26px; width: min(100%, 980px); }
+.prompt :global(.eyebrow) { color: #ed343c; }
+.prompt h2 { margin: 7px 0 14px; color: #171820; font-family: var(--font-display); font-size: clamp(40px, 5vw, 62px); font-weight: 400; letter-spacing: 0.02em; line-height: 0.95; text-shadow: 2px 2px 0 #fff8e5; text-transform: uppercase; }
+.heroCallout { display: flex; align-items: center; gap: 7px; }
+.hero { flex: 0 0 auto; width: 92px; height: 102px; }
+.heroCallout > p { position: relative; margin: 0; padding: 12px 13px; transform: rotate(1deg); border: 3px solid #171820; color: #171820; background: #fff8e5; box-shadow: 3px 3px 0 #174c93; font-size: 11px; font-weight: 800; line-height: 1.6; }
+.heroCallout > p::before { position: absolute; bottom: 13px; left: -10px; width: 14px; height: 14px; transform: rotate(45deg); border-bottom: 3px solid #171820; border-left: 3px solid #171820; background: #fff8e5; content: ''; }
+.form { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 16px; margin: 0; padding: 22px 24px; border: 3px solid #171820; background: #fff8e5; box-shadow: 6px 6px 0 #ed343c; text-align: left; }
+.fieldLabel { display: block; margin-bottom: 7px; color: #171820; font-size: 10px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.nameField,.attendance,.button,.error { grid-column: 1 / -1; }
+.nameInput { width: 100%; min-height: 43px; padding: 9px 11px; border: 2px solid #171820; border-radius: 0; color: #171820; background: #fff; font: inherit; }
+.nameInput:focus-visible { outline: 3px solid #174c93; outline-offset: 2px; }
+.attendance { display: grid; gap: 9px; margin: 0; padding: 0; border: 0; }
+.attendance legend { padding: 0; }
+.option { display: flex; align-items: center; gap: 9px; color: #171820; font-size: 11px; font-weight: 800; cursor: pointer; }
+.option input { width: 15px; height: 15px; margin: 0; accent-color: #ed343c; }
+.button { display: inline-flex; min-height: 43px; align-items: center; justify-content: center; gap: 14px; justify-self: start; padding: 11px 15px; border: 2px solid #171820; transform: skew(-4deg); color: #fff; background: #ed343c; box-shadow: 3px 3px 0 #171820; font-size: 9px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: color 160ms ease, background 160ms ease, transform 160ms ease; }
+.button:hover { transform: skew(-4deg) translateY(-2px); color: #171820; background: #90d2e7; }
+.button svg { color: #ffd447; }
+.button:disabled { opacity: 0.7; cursor: wait; }
+.error { margin: 0; color: #a02229; font-size: 12px; font-weight: 800; line-height: 1.5; }
+.names { position: absolute; right: 36px; bottom: 32px; margin: 0; color: #55545a; font-family: var(--font-display); font-size: 17px; }
+.names span { color: #ed343c; }
+.dialog { width: min(calc(100% - 32px), 440px); padding: 30px; border: 3px solid #171820; color: #171820; background: #fff8e5; box-shadow: 8px 8px 0 #ed343c; }
+.dialog::backdrop { background: rgb(23 24 32 / 78%); }
+.dialog h3 { margin: 0 0 12px; font-family: var(--font-display); font-size: 35px; font-weight: 400; text-transform: uppercase; }
+.confirmation { margin: 0; color: #4e4f59; font-size: 13px; font-weight: 700; line-height: 1.6; }
+.dialog .button { display: inline-flex; min-height: 0; margin-top: 24px; }
+
+@media (max-width: 760px) {
+  .section { min-height: 0; padding: 52px 20px 72px; }
+  .section::before { top: 11px; right: 11px; bottom: 11px; left: 11px; }
+  .content { grid-template-columns: 1fr; gap: 18px; width: min(100%, 520px); }
+  .prompt h2 { max-width: 470px; }
+  .hero { width: 79px; height: 88px; }
+  .form { gap: 14px; padding: 18px 15px; }
+  .names { right: 22px; bottom: 20px; font-size: 14px; }
+}

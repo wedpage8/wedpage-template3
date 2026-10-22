@@ -1,0 +1,33 @@
+.section { position: relative; padding: 58px 22px 64px; overflow: hidden; border-bottom: 4px solid #171820; color: #171820; background-color: #ffd447; background-image: radial-gradient(circle, rgb(23 24 32 / 14%) 1px, transparent 1.5px); background-size: 8px 8px; text-align: center; }
+.section::before,.section::after { position: absolute; top: -45px; width: 130px; height: 130px; transform: rotate(15deg); border: 3px solid #171820; background: #ed343c; content: ''; }
+.section::before { left: -77px; }
+.section::after { right: -77px; }
+.heading { margin: 0 auto 27px; }
+.heading :global(.eyebrow) { color: #174c93; }
+.heading h2 { margin: 8px auto 0; font-family: var(--font-display); font-size: clamp(38px, 5vw, 57px); font-weight: 400; letter-spacing: 0.025em; line-height: 0.98; text-shadow: 2px 2px 0 #fff8e5; text-transform: uppercase; }
+.countdownBoard { position: relative; display: grid; grid-template-columns: 150px minmax(0, 1fr); align-items: center; gap: 0 20px; width: min(100%, 850px); margin: 0 auto; padding: 25px 27px; border: 4px solid #171820; background: #fff8e5; box-shadow: 8px 8px 0 #174c93; }
+.dateStamp { position: relative; display: grid; justify-items: center; align-content: center; width: 125px; height: 125px; margin: auto; clip-path: polygon(50% 0%, 60% 12%, 75% 4%, 80% 20%, 97% 19%, 91% 36%, 100% 50%, 88% 61%, 96% 77%, 79% 81%, 76% 98%, 60% 90%, 50% 100%, 39% 89%, 23% 97%, 19% 80%, 3% 77%, 11% 61%, 0% 50%, 11% 38%, 4% 22%, 21% 19%, 25% 3%, 40% 12%); color: #fff8e5; background: #ed343c; }
+.stampTop { margin-top: 10px; font-size: 8px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; }
+.stampDay { margin: -1px 0 -5px; font-family: var(--font-display); font-size: 58px; line-height: 1; -webkit-text-stroke: 1px #171820; }
+.stampMonth { font-size: 8px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.timer { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.unit { display: grid; min-height: 100px; align-content: center; justify-items: center; padding: 11px 6px 8px; transform: rotate(-2deg); border: 3px solid #171820; background: #90d2e7; box-shadow: 4px 4px 0 #171820; }
+.unit:nth-child(even) { transform: rotate(2deg); background: #ffd447; }
+.unit:nth-child(3) { background: #ed343c; }
+.number { color: #171820; font-family: var(--font-display); font-size: clamp(38px, 6vw, 66px); font-weight: 400; font-variant-numeric: tabular-nums; line-height: 0.95; text-shadow: 2px 2px 0 #fff8e5; }
+.label { margin-top: 8px; color: #171820; font-size: 8px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
+.soundEffect { position: absolute; top: -24px; right: -20px; display: grid; width: 73px; height: 73px; transform: rotate(12deg); place-items: center; clip-path: polygon(50% 0%, 62% 17%, 80% 4%, 82% 26%, 100% 32%, 86% 48%, 100% 64%, 78% 68%, 80% 91%, 61% 81%, 49% 100%, 39% 80%, 18% 95%, 18% 72%, 0 65%, 14% 49%, 0 32%, 22% 28%, 20% 6%, 40% 17%); color: #fff; background: #174c93; font-family: var(--font-display); font-size: 17px; }
+.todayStamp { width: fit-content; margin: 0 auto; padding: 14px 23px; transform: rotate(-2deg); border: 3px solid #171820; color: #171820; background: #ed343c; box-shadow: 5px 5px 0 #171820; font-family: var(--font-display); font-size: 28px; text-align: center; text-transform: uppercase; }
+
+@media (max-width: 620px) {
+  .section { padding: 47px 20px 53px; }
+  .section::before,.section::after { width: 80px; height: 80px; }
+  .countdownBoard { grid-template-columns: 1fr; gap: 13px; width: min(100%, 440px); padding: 19px 13px 14px; }
+  .dateStamp { width: 105px; height: 105px; }
+  .stampDay { font-size: 49px; }
+  .timer { gap: 6px; }
+  .unit { min-height: 79px; padding: 8px 3px 5px; }
+  .number { font-size: clamp(31px, 9vw, 45px); }
+  .label { font-size: 7px; letter-spacing: 0.07em; }
+  .soundEffect { top: -23px; right: -6px; width: 61px; height: 61px; font-size: 14px; }
+}

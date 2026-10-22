@@ -1,0 +1,23 @@
+.section { position: relative; padding: 69px max(24px, calc((100vw - 1120px) / 2)) 78px; overflow: hidden; border-bottom: 4px solid #171820; color: #171820; background-color: #fff8e5; background-image: radial-gradient(circle, rgb(23 24 32 / 11%) 1px, transparent 1.5px); background-size: 9px 9px; }
+.intro { margin: 0 auto 36px; text-align: center; }
+.intro :global(.eyebrow) { color: #ed343c; }
+.intro h2 { margin: 8px 0 5px; color: #171820; font-family: var(--font-display); font-size: clamp(43px, 6vw, 67px); font-weight: 400; letter-spacing: 0.025em; line-height: 0.98; text-shadow: 2px 2px 0 #ffd447; text-transform: uppercase; }
+.routeNote { margin: 0; color: #585966; font-size: 12px; font-weight: 800; }
+.storyPages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 1030px; margin: 0 auto; padding: 0; list-style: none; }
+.page { position: relative; min-height: 235px; padding: 24px 20px 32px; border: 4px solid #171820; background: #90d2e7; box-shadow: 6px 6px 0 #171820; }
+.page:nth-child(2) { transform: translateY(17px) rotate(1deg); background: #ffd447; }
+.page:nth-child(3) { transform: rotate(-1deg); background: #ed343c; }
+.issue { display: inline-block; margin: 0 0 18px; padding: 6px 9px; transform: rotate(-3deg); border: 2px solid #171820; color: #fff8e5; background: #174c93; font-size: 9px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+.date { margin: 0 0 7px; color: #174c93; font-size: 9px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+.page h3 { max-width: 240px; margin: 0 0 10px; color: #171820; font-family: var(--font-display); font-size: 29px; font-weight: 400; letter-spacing: 0.02em; line-height: 0.98; text-transform: uppercase; }
+.description { margin: 0; color: #30313a; font-size: 11px; font-weight: 700; line-height: 1.7; }
+.pageNumber { position: absolute; right: 12px; bottom: 8px; color: rgb(23 24 32 / 70%); font-family: var(--font-display); font-size: 18px; }
+
+@media (max-width: 760px) {
+  .section { padding: 58px 19px 65px; }
+  .intro { margin-bottom: 25px; }
+  .storyPages { grid-template-columns: 1fr; gap: 17px; width: min(100%, 480px); }
+  .page,.page:nth-child(2),.page:nth-child(3) { min-height: 0; padding: 19px 17px 29px; transform: none; }
+  .issue { margin-bottom: 13px; }
+  .page h3 { font-size: 25px; }
+}
